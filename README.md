@@ -1,1 +1,1 @@
-# Projeto-Individual-R6
+# Projeto-Individual-SPTech
