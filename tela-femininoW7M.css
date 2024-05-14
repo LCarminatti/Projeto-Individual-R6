@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #0f051e;
+}
+
+.header {
+    height: 4rem;
+    background-color: #24262a;
+    display: flex;
+    line-height: 4rem;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.titulo {
+    background-image: url(assets/r6Inicial.png);
+    width: 150px;
+    height: 40px;
+    margin-left: 1rem;
+}
+
+.navbar {
+    width: 100vw;
+    height: 10vh;
+    color: white;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+}
+
+.header-content1 {
+    width: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header-content2 {
+    width: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 15vh;
+}
+
+.logoR6 {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 90px;
+    border: 5px solid white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(assets/imgArmaR6.svg);
+}
+
+.registerContent {
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+.buttonRegister {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 5rem;
+    background-color: #2499ff;
+    border-radius: 10px;
+    line-height: 3rem;
+    gap: 2rem;
+    text-align: center;
+    margin-right: 1rem;
+    overflow-y: hidden;
+}
+
+.buttonRegister:hover {
+    transform: scaleX(1)
+}
+
+.section1 {
+    width: 100vw;
+    height: 90vh;
+    background-image: url(assets/imagem-feminino.png);
+    background-size: cover;
+}
+
+.section2 {
+    background-color: #0f051e;
+    width: 100vw;
+    height: 100vh;
+}
+
+.section2-button {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+}
+
+.section2-button span {
+    margin-top: 2rem;
+    width: 14rem;
+    height: 10vh;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/logoW7M.png);
+    background-size: 4rem;
+    background-position: 5px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.container-imagens {
+    display: flex;
+    height: 85vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.imagem1 {
+    background-image: url(assets/imagem1-feminino.svg);
+    border: solid blue;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.imagem1:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(rgb(255, 255, 255))
+}
+.imagem2 {
+    background-image: url(assets/imagem2-feminino.svg);
+    border: solid blue;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.imagem2:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}

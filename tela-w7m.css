@@ -182,15 +182,23 @@ body {
     height: 60vh;
     width: 40vw;
     background: #ffffff;
-    border: red solid;
-    border-radius: 5rem;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    
 }
 
 .imagem-home {
     background-image: url(assets/imagem-w7m-campeões.svg);
     background-size: auto;
-    width: 100%;
-    height: 100%;
+    width: 40vw;
+    height: 60vh;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.imagem-home:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .section3 {
@@ -240,7 +248,7 @@ body {
 
 .imagem-invitacional {
     background-image: url(assets/imagem-invitacional.svg);
-border: solid blue;
+    border: solid blue;
     width: 40vw;
     height: 60vh;
     border-radius: 20px;
@@ -253,4 +261,3 @@ border: solid blue;
     height: 60vh;
     border-radius: 20px;
 }
-
