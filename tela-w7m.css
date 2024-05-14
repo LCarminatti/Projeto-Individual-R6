@@ -184,7 +184,6 @@ body {
     background: #ffffff;
     border: red solid;
     border-radius: 5rem;
-
 }
 
 .imagem-home {
@@ -192,5 +191,66 @@ body {
     background-size: auto;
     width: 100%;
     height: 100%;
+}
+
+.section3 {
+    background-color: #0f051e;
+    width: 100vw;
+    height: 100vh;
+}
+
+.section3-button {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
 }
+
+.section3-button span {
+    margin-top: 2rem;
+    width: 14rem;
+    height: 10vh;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/imagem-trofeu.jpg);
+    background-size: 5rem;
+    background-position: 5px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.container-imagens {
+    display: flex;
+    height: 85vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.imagem-invitacional {
+    background-image: url(assets/imagem-invitacional.svg);
+border: solid blue;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 20px;
+}
+
+.imagem-major {
+    background-image: url(assets/imagem-major.svg);
+    border: solid blue;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 20px;
+}
+
