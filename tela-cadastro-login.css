@@ -11,12 +11,15 @@ body {
 }
 
 .header {
+    z-index: 999;
     height: 4rem;
     background-color: #24262a;
     display: flex;
     line-height: 4rem;
     align-items: center;
     overflow-y: hidden;
+    
+
 }
 
 .titulo {
@@ -99,83 +102,4 @@ body {
 
 .buttonRegister:hover {
     transform: scaleX(1)
-}
-
-.section1 {
-    width: 100vw;
-    height: 90vh;
-    background-image: url(assets/imagem-feminino.png);
-    background-size: cover;
-}
-
-.section2 {
-    background-color: #0f051e;
-    width: 100vw;
-    height: 100vh;
-}
-
-.section2-button {
-    width: 100vw;
-    height: 15vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-
-}
-
-.section2-button span {
-    margin-top: 2rem;
-    width: 14rem;
-    height: 10vh;
-    background-color: white;
-    color: black;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(assets/logoW7M.png);
-    background-size: 4rem;
-    background-position: 5px;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-}
-
-.container-imagens {
-    display: flex;
-    height: 85vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    gap: 6rem;
-}
-
-.imagem1 {
-    background-image: url(assets/imagem1-feminino.svg);
-    border: solid blue;
-    width: 40vw;
-    height: 60vh;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.imagem1:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgb(255, 255, 255)
-}
-.imagem2 {
-    background-image: url(assets/imagem2-feminino.svg);
-    border: solid blue;
-    width: 40vw;
-    height: 60vh;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.imagem2:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
 }

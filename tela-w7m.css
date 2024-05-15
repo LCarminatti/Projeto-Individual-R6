@@ -120,7 +120,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
+    align-items: center;
 
 }
 
@@ -178,21 +178,23 @@ body {
 .section-imagem {
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
-    height: 60vh;
+    height: 65vh;
     width: 40vw;
-    background: #ffffff;
     background-repeat: no-repeat;
     border-radius: 2rem;
+    align-items: center;
     
 }
 
 .imagem-home {
     background-image: url(assets/imagem-w7m-campeões.svg);
-    background-size: auto;
-    width: 40vw;
-    height: 60vh;
+    background-size: 40rem;
+    background-repeat: no-repeat;
+    width: 35vw;
+    height: 55vh;
+    border-radius: 2rem;
     transition: all 0.3s ease-in-out;
+    border: solid red;
     
 }
 
@@ -248,16 +250,28 @@ body {
 
 .imagem-invitacional {
     background-image: url(assets/imagem-invitacional.svg);
-    border: solid blue;
+    border: solid red;
     width: 40vw;
     height: 60vh;
     border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.imagem-invitacional:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .imagem-major {
     background-image: url(assets/imagem-major.svg);
-    border: solid blue;
+    border: solid red;
     width: 40vw;
     height: 60vh;
     border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.imagem-major:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
