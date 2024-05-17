@@ -20,14 +20,14 @@ body {
 }
 
 .titulo {
-    background-image: url(assets/r6Inicial.png);
+    background-image: url(../assets/r6Inicial.png);
     width: 150px;
     height: 40px;
     margin-left: 1rem;
 }
 
 .navbar {
-    width: 100vw;
+    width: 94vw;
     height: 10vh;
     color: white;
     list-style: none;
@@ -41,6 +41,7 @@ body {
 
 .header-content1 {
     width: 22rem;
+    margin-right: 20rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -72,7 +73,7 @@ body {
     border: 5px solid white;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(assets/imgArmaR6.svg);
+    background-image: url(../assets/imgArmaR6.svg);
 }
 
 .registerContent {
@@ -102,18 +103,18 @@ body {
 }
 
 .background-w7m {
-    height: 90vh;
     width: 100vw;
+    height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(assets/background-w7m.svg);
+    background-image: url(../assets/background-w7m.svg);
 }
 
 .section2 {
     background-color: black;
     width: 100vw;
     height: 100vh;
-    overflow-y: hidden;
+   
 }
 
 .container-textImagem {
@@ -156,7 +157,7 @@ body {
 
 .section-button span {
     margin-top: 2rem;
-    width: 17rem;
+    width: 13rem;
     height: 4.8rem;
     background-color: white;
     color: black;
@@ -165,14 +166,16 @@ body {
     font-weight: 600;
     line-height: normal;
     display: flex;
-    justify-content: center;
+    gap: 1rem;
     align-items: center;
-    background-image: url(assets/logoW7M.png);
-    background-position: 5px;
-    background-repeat: no-repeat;
     border-radius: 10px;
+}
 
-
+.logow7m {
+    width: 3rem;
+    height: 3rem;
+    background-image: url(../assets/logoW7M.png);
+    background-size: cover;
 }
 
 .section-imagem {
@@ -187,7 +190,7 @@ body {
 }
 
 .imagem-home {
-    background-image: url(assets/imagem-w7m-campeões.svg);
+    background-image: url(../assets/imagem-w7m-campeões.svg);
     background-size: 40rem;
     background-repeat: no-repeat;
     width: 35vw;
@@ -221,7 +224,7 @@ body {
 
 .section3-button span {
     margin-top: 2rem;
-    width: 14rem;
+    width: 13rem;
     height: 10vh;
     background-color: white;
     color: black;
@@ -230,13 +233,19 @@ body {
     font-weight: 600;
     line-height: normal;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-image: url(assets/imagem-trofeu.jpg);
-    background-size: 5rem;
-    background-position: 5px;
-    background-repeat: no-repeat;
+    gap: 1rem;
     border-radius: 10px;
+    
+}
+
+.imagem-trofeu {
+    width: 4rem;
+    height: 4rem;
+   
+    background-image: url(../assets/imagem-trofeu.jpg);
+    background-size: cover;
+    
 }
 
 .container-imagens {
@@ -249,7 +258,7 @@ body {
 }
 
 .imagem-invitacional {
-    background-image: url(assets/imagem-invitacional.svg);
+    background-image: url(../assets/imagem-invitacional.svg);
     border: solid red;
     width: 40vw;
     height: 60vh;
@@ -263,7 +272,7 @@ body {
 }
 
 .imagem-major {
-    background-image: url(assets/imagem-major.svg);
+    background-image: url(../assets/imagem-major.svg);
     border: solid red;
     width: 40vw;
     height: 60vh;

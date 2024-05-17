@@ -20,7 +20,7 @@ body {
 }
 
 .titulo {
-    background-image: url(assets/r6Inicial.png);
+    background-image: url(../assets/r6Inicial.png);
     width: 150px;
     height: 40px;
     margin-left: 1rem;
@@ -41,6 +41,7 @@ body {
 
 .header-content1 {
     width: 22rem;
+    margin-right: 20rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -72,7 +73,7 @@ body {
     border: 5px solid white;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(assets/imgArmaR6.svg);
+    background-image: url(../assets/imgArmaR6.svg);
 }
 
 .registerContent {
@@ -104,7 +105,7 @@ body {
 .section1 {
     width: 100vw;
     height: 90vh;
-    background-image: url(assets/imagem-feminino.png);
+    background-image: url(../assets/imagem-feminino.png);
     background-size: cover;
 }
 
@@ -137,7 +138,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(assets/logoW7M.png);
+    background-image: url(../assets/logoW7M.png);
     background-size: 4rem;
     background-position: 5px;
     background-repeat: no-repeat;
@@ -154,7 +155,7 @@ body {
 }
 
 .imagem1 {
-    background-image: url(assets/imagem1-feminino.svg);
+    background-image: url(../assets/imagem1-feminino.svg);
     border: solid blue;
     width: 40vw;
     height: 60vh;
@@ -167,7 +168,7 @@ body {
     box-shadow: 0 0 10px rgb(255, 255, 255)
 }
 .imagem2 {
-    background-image: url(assets/imagem2-feminino.svg);
+    background-image: url(../assets/imagem2-feminino.svg);
     border: solid blue;
     width: 40vw;
     height: 60vh;

@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #0f051e;
+}
+
+.header {
+    height: 4rem;
+    background-color: #24262a;
+    display: flex;
+    line-height: 4rem;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.titulo {
+    background-image: url(../assets/r6Inicial.png);
+    width: 150px;
+    height: 40px;
+    margin-left: 1rem;
+}
+
+.navbar {
+    width: 100vw;
+    height: 10vh;
+    color: white;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+}
+
+.header-content1 {
+    width: 22rem;
+    margin-right: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content2 {
+    width: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 15vh;
+}
+
+.logoR6 {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 90px;
+    border: 5px solid white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/imgArmaR6.svg);
+}
+
+.registerContent {
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+.buttonRegister {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 5rem;
+    background-color: #2499ff;
+    border-radius: 10px;
+    line-height: 3rem;
+    gap: 2rem;
+    text-align: center;
+    margin-right: 1rem;
+    overflow-y: hidden;
+}
+
+.buttonRegister:hover {
+    transform: scaleX(1)
+}
+
+.background-r6 {
+    height: 90vh;
+    width: 100vw;
+    background-image: url(../assets/img-backgroundR6.svg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.background-content {
+    top: 0;
+    height: 6.64831rem;
+    width: 25rem;
+    background-image: url(../assets/Link\ →\ r6s-logo-ww.png.png);
+    margin-left: 10rem;
+    margin-top: 10rem;
+    position: absolute;
+}
+
+.section2 {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-textVideo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.section-text {
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white;
+    font-size: 1.0rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.1875;
+    text-transform: uppercase;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+
+}
+
+.section-button {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-button span {
+    margin-top: 2rem;
+    width: 16rem;
+    height: 4.8rem;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/img-informacoes.png);
+    background-position: 5px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.imagem-info {
+    width: 3rem;
+    height: 3rem;
+}
+
+.section-video {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    height: 35vh;
+    width: 40vw;
+    background: #ffffff;
+    border: #2499ff solid;
+}
+
+.video-home {
+    display: absolute;
+    
+    border: solid red;
+}
+
+.section3 {
+    width: 100vw;
+    height: 120vh;
+    background-image: url(../assets/background-agentes.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+.atacantes {
+display: flex;
+margin-bottom: 3rem;
+gap: 1rem;
+width: 14vw;
+height: 10vh;
+background-color: #2499ff;
+border-radius: 10px;
+justify-content: center;
+align-items: center;
+color: black;
+font-weight: 700;
+
+}
+
+.atacantes-content {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../assets/imagem-atacante.svg);
+    background-repeat: no-repeat;
+    
+}
+
+
+.container-flip {
+    position: relative;
+    width: 350px;
+    height: 550px;
+}
+
+.container-flip:hover .flip {
+    transform: rotateY(180deg);
+}
+
+.flip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d ;
+    transition: .8s;
+}
+
+.frente,.tras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #00000069;
+    backface-visibility: hidden;
+}
+
+.cards-agentes{
+    margin-top: 2rem;
+    height: 90vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.3px;
+    overflow-y: hidden;
+    
+}
+  
+
+.cards-agentes div{
+    border-radius: 1rem;
+    display: flex;
+    height: 40vh;
+    width: 10vw;
+    margin-left: 0.5rem;
+    
+}
+
+.frente-capitao {
+    background-image: url(../assets/capitao-imagem.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-blitz {
+    background-image: url(../assets/blitz-imagem.png);
+    background-size: cover;
+}
+
+.frente-iq {
+    background-image: url(../assets/iq-imagem.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-fuze {
+    background-image: url(../assets/fuze-imagem.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-glaz {
+    background-image: url(../assets/glaz-imagem.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-sledge {
+    background-image: url(../assets/sledge-imagem.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-twitch {
+    background-image: url(../assets/twitch-imagem.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-thatcher {
+    background-image: url(../assets/tatcher-imagem.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-ash {
+    background-image: url(../assets/ash-imagem.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-thermite {
+    background-image: url(../assets/thermite-imagem.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.tras {
+    border: solid red;
+    background-color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section4 {
+    width: 100vw;
+    height: 120vh;
+    background-image: url(../assets/background-agentes.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+.defensores {
+display: flex;
+margin-bottom: 3rem;
+gap: 1rem;
+width: 14vw;
+height: 10vh;
+background-color: #2499ff;
+border-radius: 10px;
+justify-content: center;
+align-items: center;
+color: black;
+font-weight: 700;
+
+}
+
+.defensores-content {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../assets/logo-defensores.svg);
+    background-repeat: no-repeat;
+    
+}
+
+.frente-doc {
+    background-image: url(../assets/imagem-doc.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-rook {
+    background-image: url(../assets/imagem-rook.png);
+    background-size: cover;
+}
+
+.frente-jager {
+    background-image: url(../assets/imagem-jager.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-smoke {
+    background-image: url(../assets/imagem-smoke.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-valkyrie {
+    background-image: url(../assets/imagem-valkyrie.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-tachanka {
+    background-image: url(../assets/imagem-tachanka.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-kapkan {
+    background-image: url(../assets/imagem-kapkan.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-caveira {
+    background-image: url(../assets/imagem-caveira.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-pulse {
+    background-image: url(../assets/imagem-pulse.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.frente-castle {
+    background-image: url(../assets/imagem-castle.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
