@@ -195,36 +195,43 @@ body {
     border: #2499ff solid;
 }
 
-.video-home {
-    display: absolute;
-    
-    border: solid red;
+.trailler{
+    width: 40rem;
+    height: 25rem;
+    border: solid #2499ff;
+}
+
+.video-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section3 {
     width: 100vw;
     height: 120vh;
     background-image: url(../assets/background-agentes.png);
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
 }
 
 
 .atacantes {
-display: flex;
-margin-bottom: 3rem;
-gap: 1rem;
-width: 14vw;
-height: 10vh;
-background-color: #2499ff;
-border-radius: 10px;
-justify-content: center;
-align-items: center;
-color: black;
-font-weight: 700;
+    display: flex;
+    margin-bottom: 3rem;
+    gap: 1rem;
+    width: 14vw;
+    height: 10vh;
+    background-color: #2499ff;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 700;
 
 }
 
@@ -236,7 +243,7 @@ font-weight: 700;
     background-size: cover;
     background-image: url(../assets/imagem-atacante.svg);
     background-repeat: no-repeat;
-    
+
 }
 
 
@@ -255,11 +262,12 @@ font-weight: 700;
     width: 100%;
     height: 100%;
     cursor: pointer;
-    transform-style: preserve-3d ;
+    transform-style: preserve-3d;
     transition: .8s;
 }
 
-.frente,.tras {
+.frente,
+.tras {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -268,7 +276,7 @@ font-weight: 700;
     backface-visibility: hidden;
 }
 
-.cards-agentes{
+.cards-agentes {
     margin-top: 2rem;
     height: 90vh;
     width: 60vw;
@@ -277,76 +285,63 @@ font-weight: 700;
     flex-wrap: wrap;
     gap: 0.3px;
     overflow-y: hidden;
-    
-}
-  
 
-.cards-agentes div{
+}
+
+
+.cards-agentes div {
     border-radius: 1rem;
     display: flex;
     height: 40vh;
     width: 10vw;
     margin-left: 0.5rem;
-    
+    background-size: cover;
+    background-position: center;
+
 }
 
 .frente-capitao {
     background-image: url(../assets/capitao-imagem.png);
-    background-size: cover;
-    background-position: center;
+    
 }
 
 .frente-blitz {
     background-image: url(../assets/blitz-imagem.png);
-    background-size: cover;
+    
 }
 
 .frente-iq {
     background-image: url(../assets/iq-imagem.png);
-    background-size: cover;
-    background-position: center;
+   
 }
 
 .frente-fuze {
     background-image: url(../assets/fuze-imagem.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-glaz {
     background-image: url(../assets/glaz-imagem.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-sledge {
     background-image: url(../assets/sledge-imagem.png);
-    background-size: cover;
-    background-position: center;
+
 }
 
 .frente-twitch {
     background-image: url(../assets/twitch-imagem.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-thatcher {
     background-image: url(../assets/tatcher-imagem.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-ash {
     background-image: url(../assets/ash-imagem.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-thermite {
     background-image: url(../assets/thermite-imagem.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .tras {
@@ -367,22 +362,22 @@ font-weight: 700;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
 }
 
 
 .defensores {
-display: flex;
-margin-bottom: 3rem;
-gap: 1rem;
-width: 14vw;
-height: 10vh;
-background-color: #2499ff;
-border-radius: 10px;
-justify-content: center;
-align-items: center;
-color: black;
-font-weight: 700;
+    display: flex;
+    margin-bottom: 3rem;
+    gap: 1rem;
+    width: 14vw;
+    height: 10vh;
+    background-color: #2499ff;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 700;
 
 }
 
@@ -394,66 +389,45 @@ font-weight: 700;
     background-size: cover;
     background-image: url(../assets/logo-defensores.svg);
     background-repeat: no-repeat;
-    
+
 }
 
 .frente-doc {
     background-image: url(../assets/imagem-doc.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-rook {
     background-image: url(../assets/imagem-rook.png);
-    background-size: cover;
 }
 
 .frente-jager {
     background-image: url(../assets/imagem-jager.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-smoke {
     background-image: url(../assets/imagem-smoke.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-valkyrie {
     background-image: url(../assets/imagem-valkyrie.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-tachanka {
     background-image: url(../assets/imagem-tachanka.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-kapkan {
     background-image: url(../assets/imagem-kapkan.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-caveira {
     background-image: url(../assets/imagem-caveira.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-pulse {
     background-image: url(../assets/imagem-pulse.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .frente-castle {
     background-image: url(../assets/imagem-castle.png);
-    background-size: cover;
-    background-position: center;
 }
-
-
