@@ -1,3 +1,4 @@
+/* Reset Universal */
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +7,26 @@
     overflow-x: hidden;
 }
 
-body {
-    background-color: #0f051e;
+/* Variáveis */
+:root {
+    --cor-fundo: #0f051e;
+    --cor-header: #24262a;
+    --cor-primaria: #2499ff;
+    --cor-texto: white;
+    --altura-header: 4rem;
+    --altura-navbar: 10vh;
 }
 
+/* Corpo */
+body {
+    background-color: var(--cor-fundo);
+}
+
+/* Cabeçalho */
 .header {
-    height: 4rem;
-    background-color: #24262a;
+    height: var(--altura-header);
+    background-color: var(--cor-header);
     display: flex;
-    line-height: 4rem;
     align-items: center;
     overflow-y: hidden;
 }
@@ -26,10 +38,11 @@ body {
     margin-left: 1rem;
 }
 
+/* Navbar */
 .navbar {
     width: 100vw;
-    height: 10vh;
-    color: white;
+    height: var(--altura-navbar);
+    color: var(--cor-texto);
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -39,14 +52,7 @@ body {
     top: 0;
 }
 
-.header-content1 {
-    width: 22rem;
-    margin-right: 20rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
+.header-content1,
 .header-content2 {
     width: 22rem;
     display: flex;
@@ -54,6 +60,9 @@ body {
     justify-content: space-between;
 }
 
+.header-content1 {
+    margin-right: 20rem;
+}
 
 .header-logo {
     display: flex;
@@ -69,12 +78,13 @@ body {
     height: 90px;
     flex-shrink: 0;
     border-radius: 90px;
-    border: 5px solid white;
+    border: 5px solid var(--cor-texto);
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(../assets/imgArmaR6.svg);
 }
 
+/* Botões */
 .registerContent {
     width: 12rem;
     display: flex;
@@ -88,26 +98,25 @@ body {
     justify-content: center;
     height: 2.5rem;
     width: 5rem;
-    background-color: #2499ff;
+    background-color: var(--cor-primaria);
     border-radius: 10px;
     line-height: 3rem;
-    gap: 2rem;
     text-align: center;
     margin-right: 1rem;
     overflow-y: hidden;
 }
 
 .buttonRegister:hover {
-    transform: scaleX(1)
+    transform: scaleX(1);
 }
 
+/* Fundo e Seções */
 .background-r6 {
     height: 90vh;
     width: 100vw;
     background-image: url(../assets/img-backgroundR6.svg);
     background-size: cover;
     background-position: center;
-
 }
 
 .background-content {
@@ -130,7 +139,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
 }
 
 .section-text {
@@ -139,17 +147,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-shrink: 0;
-    color: white;
-    font-size: 1.0rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2.1875;
+    color: var(--cor-texto);
+    font-size: 1rem;
     text-transform: uppercase;
     align-items: center;
     text-align: center;
     padding: 3rem;
-
 }
 
 .section-button {
@@ -165,12 +168,10 @@ body {
     margin-top: 2rem;
     width: 16rem;
     height: 4.8rem;
-    background-color: white;
+    background-color: var(--cor-texto);
     color: black;
     font-size: 1rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,61 +192,88 @@ body {
     margin-top: 5rem;
     height: 35vh;
     width: 40vw;
-    background: #ffffff;
-    border: #2499ff solid;
+    background: var(--cor-texto);
+    border: var(--cor-primaria) solid;
 }
 
-.trailler{
+.trailler {
     width: 40rem;
     height: 25rem;
-    border: solid #2499ff;
+    border: solid var(--cor-primaria);
 }
 
-.video-home{
+.video-home {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.section3 {
+.section3,
+.section4 {
     width: 100vw;
     height: 120vh;
     background-image: url(../assets/background-agentes.png);
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 
-
-.atacantes {
+/* Botões de Agentes */
+.atacantes,
+.defensores {
     display: flex;
     margin-bottom: 3rem;
     gap: 1rem;
     width: 14vw;
     height: 10vh;
-    background-color: #2499ff;
+    background-color: var(--cor-primaria);
     border-radius: 10px;
     justify-content: center;
     align-items: center;
     color: black;
     font-weight: 700;
-
 }
 
-.atacantes-content {
+.atacantes-content,
+.defensores-content {
     display: flex;
     width: 3rem;
     height: 3rem;
     background-position: center;
     background-size: cover;
-    background-image: url(../assets/imagem-atacante.svg);
     background-repeat: no-repeat;
-
 }
 
+.atacantes-content {
+    background-image: url(../assets/imagem-atacante.svg);
+}
+
+.defensores-content {
+    background-image: url(../assets/logo-defensores.svg);
+}
+
+/* Cartões de Agentes */
+.cards-agentes {
+    margin-top: 2rem;
+    height: 90vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.3px;
+    overflow-y: hidden;
+}
+
+.cards-agentes div {
+    border-radius: 1rem;
+    display: flex;
+    height: 40vh;
+    width: 10vw;
+    margin-left: 0.5rem;
+    background-size: cover;
+    background-position: center;
+}
 
 .container-flip {
     position: relative;
@@ -254,7 +282,7 @@ body {
 }
 
 .container-flip:hover .flip {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
 }
 
 .flip {
@@ -276,158 +304,32 @@ body {
     backface-visibility: hidden;
 }
 
-.cards-agentes {
-    margin-top: 2rem;
-    height: 90vh;
-    width: 60vw;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.3px;
-    overflow-y: hidden;
-
-}
-
-
-.cards-agentes div {
-    border-radius: 1rem;
-    display: flex;
-    height: 40vh;
-    width: 10vw;
-    margin-left: 0.5rem;
-    background-size: cover;
-    background-position: center;
-
-}
-
-.frente-capitao {
-    background-image: url(../assets/capitao-imagem.png);
-    
-}
-
-.frente-blitz {
-    background-image: url(../assets/blitz-imagem.png);
-    
-}
-
-.frente-iq {
-    background-image: url(../assets/iq-imagem.png);
-   
-}
-
-.frente-fuze {
-    background-image: url(../assets/fuze-imagem.png);
-}
-
-.frente-glaz {
-    background-image: url(../assets/glaz-imagem.png);
-}
-
-.frente-sledge {
-    background-image: url(../assets/sledge-imagem.png);
-
-}
-
-.frente-twitch {
-    background-image: url(../assets/twitch-imagem.png);
-}
-
-.frente-thatcher {
-    background-image: url(../assets/tatcher-imagem.png);
-}
-
-.frente-ash {
-    background-image: url(../assets/ash-imagem.png);
-}
-
-.frente-thermite {
-    background-image: url(../assets/thermite-imagem.png);
-}
-
 .tras {
-    border: solid red;
-    background-color: white;
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Imagens dos Cartões */
+#capitao { background-image: url(../assets/capitao-imagem.png); }
+#blitz { background-image: url(../assets/blitz-imagem.png); }
+#iq { background-image: url(../assets/iq-imagem.png); }
+#fuze { background-image: url(../assets/fuze-imagem.png); }
+#glaz { background-image: url(../assets/glaz-imagem.png); }
+#sledge { background-image: url(../assets/sledge-imagem.png); }
+#twitch { background-image: url(../assets/twitch-imagem.png); }
+#thatcher { background-image: url(../assets/tatcher-imagem.png); }
+#ash { background-image: url(../assets/ash-imagem.png); }
+#thermite { background-image: url(../assets/thermite-imagem.png); }
 
-.section4 {
-    width: 100vw;
-    height: 120vh;
-    background-image: url(../assets/background-agentes.png);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-
-.defensores {
-    display: flex;
-    margin-bottom: 3rem;
-    gap: 1rem;
-    width: 14vw;
-    height: 10vh;
-    background-color: #2499ff;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-weight: 700;
-
-}
-
-.defensores-content {
-    display: flex;
-    width: 3rem;
-    height: 3rem;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../assets/logo-defensores.svg);
-    background-repeat: no-repeat;
-
-}
-
-.frente-doc {
-    background-image: url(../assets/imagem-doc.png);
-}
-
-.frente-rook {
-    background-image: url(../assets/imagem-rook.png);
-}
-
-.frente-jager {
-    background-image: url(../assets/imagem-jager.png);
-}
-
-.frente-smoke {
-    background-image: url(../assets/imagem-smoke.png);
-}
-
-.frente-valkyrie {
-    background-image: url(../assets/imagem-valkyrie.png);
-}
-
-.frente-tachanka {
-    background-image: url(../assets/imagem-tachanka.png);
-}
-
-.frente-kapkan {
-    background-image: url(../assets/imagem-kapkan.png);
-}
-
-.frente-caveira {
-    background-image: url(../assets/imagem-caveira.png);
-}
-
-.frente-pulse {
-    background-image: url(../assets/imagem-pulse.png);
-}
-
-.frente-castle {
-    background-image: url(../assets/imagem-castle.png);
-}
+.frente-doc { background-image: url(../assets/imagem-doc.png); }
+.frente-rook { background-image: url(../assets/imagem-rook.png); }
+.frente-jager { background-image: url(../assets/imagem-jager.png); }
+.frente-smoke { background-image: url(../assets/imagem-smoke.png); }
+.frente-valkyrie { background-image: url(../assets/imagem-valkyrie.png); }
+.frente-tachanka { background-image: url(../assets/imagem-tachanka.png); }
+.frente-kapkan { background-image: url(../assets/imagem-kapkan.png); }
+.frente-caveira { background-image: url(../assets/imagem-caveira.png); }
+.frente-pulse { background-image: url(../assets/imagem-pulse.png); }
+.frente-castle { background-image: url(../assets/imagem-castle.png)}

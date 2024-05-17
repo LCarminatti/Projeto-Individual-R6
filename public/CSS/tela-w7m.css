@@ -27,7 +27,7 @@ body {
 }
 
 .navbar {
-    width: 94vw;
+    width: 93vw;
     height: 10vh;
     color: white;
     list-style: none;
@@ -114,6 +114,7 @@ body {
     background-color: black;
     width: 100vw;
     height: 100vh;
+    overflow-y: hidden;
    
 }
 
