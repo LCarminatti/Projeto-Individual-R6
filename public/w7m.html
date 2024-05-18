@@ -10,25 +10,26 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./CSS/tela-w7m.css" />
+    <link rel="stylesheet" href="CSS/w7m.css" />
+    <link rel="stylesheet" href="CSS/slide.css">
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header-logo"><span class="logoR6"></span></div>
         <div class="navbar">
-          <a href="homePage.html"><div class="titulo"></div></a>
+          <a href="index.html"><div class="titulo"></div></a>
           <div class="header-content1">
             <span>Sobre Mim</span>
             <span>Sobre W7M</span>
-            <span>Feminino</span>
+           <a href="feminino.html"> <span>Feminino</span></a>
           </div>
           <div class="header-content2">
             <span>Meta</span>
             <span>Operadores</span>
             <span>Informações do Jogo</span>
           </div>
-            <a href="tela-cadastro-login.html"><span class="buttonRegister">Login</span></a>
+            <a href="cadastro.html"><span class="buttonRegister">Login</span></a>
           </div>
         </div>
       </div>
@@ -68,10 +69,39 @@
 
     <section class="section3">
       <div class="section3-button"><span> <div class="imagem-trofeu"></div>TÍTULOS</span></div>
-      <div class="container-imagens">
-        <div class="imagem-invitacional"></div>
-        <div class="imagem-major"></div>
+      
+      <section class="slider"></section>
+      <div class="slider-content">
+        <input type="radio" name="btnRadio" id="radio1">
+        <input type="radio" name="btnRadio" id="radio2">
+        <input type="radio" name="btnRadio" id="radio3">
+
+        <div class="slide-box primeiro">
+          <img src="assets/invitacional-w7m.svg" alt="slide 1" class="img-major2">
+        </div>
+
+        <div class="slide-box">
+          <img src="assets/major1-w7m.svg" alt="slide 2" class="img-invi">
+        </div>
+
+        <div class="slide-box">
+          <img src="assets/major2-w7m.svg" alt="slide 3" class="img-major">
+        </div>
+
+        <div class="nav-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+        </div>
+
+        <div class="nav-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+        </div>
+
       </div>
     </section>
+    <script src="JS/slider.js"></script>
   </body>
 </html>

@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #0f051e;
+    background-color: #0b0406ef;
 }
 
 .header {
@@ -115,7 +115,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-y: hidden;
-   
+
 }
 
 .container-textImagem {
@@ -161,6 +161,7 @@ body {
     width: 13rem;
     height: 4.8rem;
     background-color: white;
+    border: solid red;
     color: black;
     font-size: 1rem;
     font-style: normal;
@@ -187,7 +188,7 @@ body {
     background-repeat: no-repeat;
     border-radius: 2rem;
     align-items: center;
-    
+
 }
 
 .imagem-home {
@@ -199,7 +200,7 @@ body {
     border-radius: 2rem;
     transition: all 0.3s ease-in-out;
     border: solid red;
-    
+
 }
 
 .imagem-home:hover {
@@ -208,9 +209,10 @@ body {
 }
 
 .section3 {
-    background-color: #0f051e;
+    background-color: #0b0406ef;
     width: 100vw;
     height: 100vh;
+    overflow-y: hidden;
 }
 
 .section3-button {
@@ -224,10 +226,11 @@ body {
 }
 
 .section3-button span {
-    margin-top: 2rem;
+    margin-top: rem;
     width: 13rem;
     height: 10vh;
     background-color: white;
+    border: solid red;
     color: black;
     font-size: 1rem;
     font-style: normal;
@@ -237,16 +240,16 @@ body {
     align-items: center;
     gap: 1rem;
     border-radius: 10px;
-    
+
 }
 
 .imagem-trofeu {
     width: 4rem;
     height: 4rem;
-   
+
     background-image: url(../assets/imagem-trofeu.jpg);
     background-size: cover;
-    
+
 }
 
 .container-imagens {
@@ -256,32 +259,10 @@ body {
     align-items: center;
     justify-content: center;
     gap: 6rem;
+
 }
 
-.imagem-invitacional {
-    background-image: url(../assets/imagem-invitacional.svg);
-    border: solid red;
-    width: 40vw;
-    height: 60vh;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.imagem-invitacional:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-}
-
-.imagem-major {
-    background-image: url(../assets/imagem-major.svg);
-    border: solid red;
-    width: 40vw;
-    height: 60vh;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.imagem-major:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
+.imagem-home {
+    background-image: url(../assets/felipe-funari.jpg);
+    background-size: cover;
 }

@@ -1,335 +1,59 @@
-/* Reset Universal */
-* {
-    margin: 0;
+*{
+margin: 0;
+padding: 0;
+}
+section.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-    overflow-x: hidden;
 }
 
-/* Variáveis */
-:root {
-    --cor-fundo: #0f051e;
-    --cor-header: #24262a;
-    --cor-primaria: #2499ff;
-    --cor-texto: white;
-    --altura-header: 4rem;
-    --altura-navbar: 10vh;
-}
-
-/* Corpo */
-body {
-    background-color: var(--cor-fundo);
-}
-
-/* Cabeçalho */
-.header {
-    height: var(--altura-header);
-    background-color: var(--cor-header);
+.container-slider {
+    width: 400%;
+    height: auto;
     display: flex;
-    align-items: center;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
-.titulo {
-    background-image: url(../assets/r6Inicial.png);
-    width: 150px;
-    height: 40px;
-    margin-left: 1rem;
+.container-slide input{
+    display: none;
 }
 
-/* Navbar */
-.navbar {
-    width: 100vw;
-    height: var(--altura-navbar);
-    color: var(--cor-texto);
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow-y: hidden;
-    position: absolute;
-    top: 0;
-}
-
-.header-content1,
-.header-content2 {
-    width: 22rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-content1 {
-    margin-right: 20rem;
-}
-
-.header-logo {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 15vh;
-}
-
-.logoR6 {
-    width: 90px;
-    height: 90px;
-    flex-shrink: 0;
-    border-radius: 90px;
-    border: 5px solid var(--cor-texto);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url(../assets/imgArmaR6.svg);
-}
-
-/* Botões */
-.registerContent {
-    width: 12rem;
-    display: flex;
-    justify-content: space-between;
-    overflow-y: hidden;
-}
-
-.buttonRegister {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.5rem;
-    width: 5rem;
-    background-color: var(--cor-primaria);
-    border-radius: 10px;
-    line-height: 3rem;
-    text-align: center;
-    margin-right: 1rem;
-    overflow-y: hidden;
-}
-
-.buttonRegister:hover {
-    transform: scaleX(1);
-}
-
-/* Fundo e Seções */
-.background-r6 {
-    height: 90vh;
-    width: 100vw;
-    background-image: url(../assets/img-backgroundR6.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.background-content {
-    top: 0;
-    height: 6.64831rem;
-    width: 25rem;
-    background-image: url(../assets/Link\ →\ r6s-logo-ww.png.png);
-    margin-left: 10rem;
-    margin-top: 10rem;
-    position: absolute;
-}
-
-.section2 {
-    background-color: black;
-    height: 100vh;
-    width: 100vw;
-}
-
-.container-textVideo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.section-text {
-    width: 50vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: var(--cor-texto);
-    font-size: 1rem;
-    text-transform: uppercase;
-    align-items: center;
-    text-align: center;
-    padding: 3rem;
-}
-
-.section-button {
-    width: 100vw;
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.section-button span {
-    margin-top: 2rem;
-    width: 16rem;
-    height: 4.8rem;
-    background-color: var(--cor-texto);
-    color: black;
-    font-size: 1rem;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../assets/img-informacoes.png);
-    background-position: 5px;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-}
-
-.imagem-info {
-    width: 3rem;
-    height: 3rem;
-}
-
-.section-video {
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem;
-    height: 35vh;
-    width: 40vw;
-    background: var(--cor-texto);
-    border: var(--cor-primaria) solid;
-}
-
-.trailler {
-    width: 40rem;
-    height: 25rem;
-    border: solid var(--cor-primaria);
-}
-
-.video-home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.section3,
-.section4 {
-    width: 100vw;
-    height: 120vh;
-    background-image: url(../assets/background-agentes.png);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* Botões de Agentes */
-.atacantes,
-.defensores {
-    display: flex;
-    margin-bottom: 3rem;
-    gap: 1rem;
-    width: 14vw;
-    height: 10vh;
-    background-color: var(--cor-primaria);
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-weight: 700;
-}
-
-.atacantes-content,
-.defensores-content {
-    display: flex;
-    width: 3rem;
-    height: 3rem;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.atacantes-content {
-    background-image: url(../assets/imagem-atacante.svg);
-}
-
-.defensores-content {
-    background-image: url(../assets/logo-defensores.svg);
-}
-
-/* Cartões de Agentes */
-.cards-agentes {
-    margin-top: 2rem;
-    height: 90vh;
-    width: 60vw;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.3px;
-    overflow-y: hidden;
-}
-
-.cards-agentes div {
-    border-radius: 1rem;
-    display: flex;
-    height: 40vh;
-    width: 10vw;
-    margin-left: 0.5rem;
-    background-size: cover;
-    background-position: center;
-}
-
-.container-flip {
+.slide-box {
+    width: 25%;
+    height: auto;
     position: relative;
-    width: 350px;
-    height: 550px;
+    text-align: center;
 }
 
-.container-flip:hover .flip {
-    transform: rotateY(360deg);
+.slide-box img {
+    width: 100%;
 }
 
-.flip {
+.nav-manual, .nav-auto {
     position: absolute;
     width: 100%;
-    height: 100%;
-    cursor: pointer;
-    transform-style: preserve-3d;
-    transition: .8s;
-}
-
-.frente,
-.tras {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px #00000069;
-    backface-visibility: hidden;
-}
-
-.tras {
-    transform: rotateY(360deg);
+    margin-top: 35%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-/* Imagens dos Cartões */
-#capitao { background-image: url(../assets/capitao-imagem.png); }
-#blitz { background-image: url(../assets/blitz-imagem.png); }
-#iq { background-image: url(../assets/iq-imagem.png); }
-#fuze { background-image: url(../assets/fuze-imagem.png); }
-#glaz { background-image: url(../assets/glaz-imagem.png); }
-#sledge { background-image: url(../assets/sledge-imagem.png); }
-#twitch { background-image: url(../assets/twitch-imagem.png); }
-#thatcher { background-image: url(../assets/tatcher-imagem.png); }
-#ash { background-image: url(../assets/ash-imagem.png); }
-#thermite { background-image: url(../assets/thermite-imagem.png); }
+.nav-manual .manual-btn, .nav-auto div {
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer; 
+    transition: 0.3s; 
+}
 
-.frente-doc { background-image: url(../assets/imagem-doc.png); }
-.frente-rook { background-image: url(../assets/imagem-rook.png); }
-.frente-jager { background-image: url(../assets/imagem-jager.png); }
-.frente-smoke { background-image: url(../assets/imagem-smoke.png); }
-.frente-valkyrie { background-image: url(../assets/imagem-valkyrie.png); }
-.frente-tachanka { background-image: url(../assets/imagem-tachanka.png); }
-.frente-kapkan { background-image: url(../assets/imagem-kapkan.png); }
-.frente-caveira { background-image: url(../assets/imagem-caveira.png); }
-.frente-pulse { background-image: url(../assets/imagem-pulse.png); }
-.frente-castle { background-image: url(../assets/imagem-castle.png)}
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover {
+    background-color: red;
+}
+
+
+

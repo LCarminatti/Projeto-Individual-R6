@@ -130,6 +130,7 @@ body {
     width: 14rem;
     height: 10vh;
     background-color: white;
+    border: solid blue;
     color: black;
     font-size: 1rem;
     font-style: normal;
@@ -167,6 +168,7 @@ body {
     transform: scale(1.1);
     box-shadow: 0 0 10px rgb(255, 255, 255)
 }
+
 .imagem2 {
     background-image: url(../assets/imagem2-feminino.svg);
     border: solid blue;
