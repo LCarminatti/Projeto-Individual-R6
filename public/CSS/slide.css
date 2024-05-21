@@ -23,20 +23,22 @@ section.slider {
     text-align: center;
     overflow-y: hidden;
     transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide-box img {
     height: 80vh;
-    border: solid red;
     border-radius: 20px;
-    background-size: cover;
+  
 }
 
 .nav-manual,
 .nav-auto {
     position: absolute;
     width: 100vw;
-    margin-top: 39%;
+    margin-top: 36%;
     display: flex;
     justify-content: center;
     align-items: center;

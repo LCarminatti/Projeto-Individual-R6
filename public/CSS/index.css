@@ -4,8 +4,12 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     overflow-x: hidden;    
+    
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: #0f051e;
@@ -38,6 +42,11 @@ body {
     overflow-y: hidden;
     position: absolute;
     top: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
 }
 
 .header-content1 {
@@ -511,3 +520,79 @@ body {
     border-radius: 20px;
 }
 
+.section-sobre {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.container-bio {
+    width: 90vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.box-container {
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-textImg {
+    width: 50vw;
+    height: 71vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #2499ff;
+    border-radius: 5px;
+}
+
+.img-bio {
+    width: 20vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-bio {
+    width: 30vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-text {
+    background-color: rgba(0, 0, 0, 0.849);
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 19px;
+    
+    
+}
+
+.content-img {
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/foto-carminatti.JPG);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
