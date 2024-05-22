@@ -61,19 +61,160 @@
     </form>
 
     <form id="signup">
-      <input type="text" placeholder="Nome" required />
+      <input type="text" placeholder="Nome" required id="input_nome" />
       <i class="iNome"></i>
-      <input type="text" placeholder="Email" required />
+      <input type="text" placeholder="Email" required id="input_email"/>
       <i class="iEmail"></i>
-      <input type="password" placeholder="Senha" required />
+      <input type="password" placeholder="Senha" required id="input_senha"/>
       <i class="iPassword"></i>
-      <input type="password" placeholder="Confirmar Senha" required />
+      <input type="password" placeholder="Confirmar Senha" required id="input_senha2"/>
       <i class=" iPassword2"></i>
       
-      <button type="submit">Cadastrar</button>
+      <button onclick="cadastrar()" type="submit">Cadastrar</button>
     </form>
   </div>
 </div>
+
+<div id="div_error"></div>
   <script src="JS/cadastro.js"></script>
 </body>
 </html>
+<script>
+  function cadastrar() {
+
+//Recupere o valor da nova input pelo nome do id
+// Agora vá para o método fetch logo abaixo
+var nomeVar = input_nome.value;
+var emailVar = input_email.value;
+var senhaVar = input_senha.value;
+var confirmacaoSenhaVar = input_senha2.value;
+
+if (
+    nomeVar == "" ||
+    emailVar == "" ||
+    senhaVar == "" ||
+    confirmacaoSenhaVar == "" 
+) {
+    // div_erro.style.display = "block";
+    // div_erro.innerHTML =
+
+    alert("Preencha todos os campos");
+
+    return false;
+} else {
+    setInterval(sumirMensagem, 5000);
+}
+
+// Enviando o valor da nova input
+fetch("/usuarios/cadastrar", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+        
+    }),
+})
+    .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            // div_erro.style.display = "block";
+            // div_erro.innerHTML =
+            alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+
+            setTimeout(() => {
+                window.location = "#signin";
+            }, 2000);
+
+            limparFormulario();
+            finalizarAguardar();
+        } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+    })
+    .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
+return false;
+}
+
+function sumirMensagem() {
+div_erro.style.display = "none";
+}
+  function entrar() {
+        aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            div_error.style.display = "block"
+            div_error.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        div_error.style.display = "none"
+    }
+
+</script>
