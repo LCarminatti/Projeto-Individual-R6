@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    position: absolute;
+    text-align: center;
+    font-size: 3rem;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg-water {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgb(45, 0, 255);
+    width: 90%;
+    max-width: 800px;
+
+    border: 2px solid #e1e1e6;
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow: 0 0 2px 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.questions-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.question {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.answers-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+}
+
+.next-question {
+    margin-top: 2rem;
+}
+
+.button {
+    background-color: #4863f7;
+    color: #fffdfd;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 6px;
+    height: 48px;
+    padding: 0 32px;
+    transition: filter 0.2s;
+}
+
+.button:not(:disabled):hover {
+    filter: brightness(0.8);
+}
+
+.hide {
+    display: none;
+}
+
+.correct {
+    background-color: #049b48;
+}
+
+.incorrect {
+    background-color: #a10101;
+}
+
+.answer:disabled {
+    cursor: not-allowed;
+}
+
+.exit-button {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(0,140,255);
+    text-decoration: none;
+    font-family: sans-serif;
+  }
+  .exit-button:hover {
+    box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+  }

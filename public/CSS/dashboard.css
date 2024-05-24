@@ -95,7 +95,7 @@ body {
 }
 
 .div-results .feed-container {
-  background-color: #212124;
+  background-color: #000000;
   border-radius: 5px;
   margin-bottom: 80px;
 }
@@ -112,7 +112,7 @@ body {
 /* pagina graficos */
 
 .dash-header {
-  background-color: #212124;
+  background-color: #000000;
 }
 
 .dash {
@@ -120,7 +120,7 @@ body {
   position: relative;
   top: 0;
   left: 20%;
-  background-color: #161618;
+  background-color: #0f051e;
   height: 100vh;
   overflow: auto;
 }
@@ -132,7 +132,7 @@ body {
   width: 70%;
   margin: auto;
   margin-top: 10px;
-  background-color: #212124;
+  background-color: #242427;
 }
 
 .area-parametros-alerta .titulo-legenda {
@@ -349,7 +349,7 @@ canvas {
   justify-content: space-evenly;
   align-items: center;
   border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  background-color: #000000;
 }
 
 .dash-right {
@@ -366,6 +366,17 @@ canvas {
 
 .header-left h1 {
   color: #2ed0e9;
+}
+
+.perfil-img {
+    width: 7rem;
+    height: 7rem;
+    border: solid #2ed0e9;
+    border-radius: 50%;
+    background-color: white;
+    background-image: url(../assets/imagem-caveira.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hello {
@@ -387,7 +398,8 @@ canvas {
 .btn-nav {
   width: 40%;
   color: white;
-  background-color: #e6005a;
+  background-color: #2499ff;
+  border: 3px solid white;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
@@ -395,15 +407,15 @@ canvas {
 
 .btn-nav-white {
   width: 40%;
-  background-color: white;
-  border: 3px solid #e6005a;
+  background-color: #2499ff;
+  border: 3px solid white;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
 }
 
 .btn-nav-white h3 {
-  color: #e6005a;
+  color: white;
   padding: 0;
   margin: 0;
 }
@@ -418,8 +430,8 @@ canvas {
   margin: 0;
   padding: 0;
   width: 20%;
-  background-color: #32b9cd;
-  color: white;
+  background-color: #f7fafa;
+  color: rgb(0, 0, 0);
   border-radius: 10px;
   text-align: center;
   padding: 10px 15px;
