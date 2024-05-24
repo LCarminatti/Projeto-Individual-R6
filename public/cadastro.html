@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login | R6</title>
   <link rel="stylesheet" href="CSS/cadastro.css">
-  <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header class="header">
@@ -17,7 +16,7 @@
         <div class="header-content1">
           <span>Sobre Mim</span>
           <a href="w7m.html"><span>Sobre W7M</span></a>
-         <a href="feminino.html"> <span>Feminino</span></a>
+          <a href="feminino.html"><span>Feminino</span></a>
         </div>
         <div class="header-content2">
           <span>Meta</span>
@@ -32,110 +31,78 @@
   </header>
 
   <div class="container">
+    <div class="container-login">
+      <div class="buttonsForm">
+        <div class="btnColor"></div>
+        <button id="btnSignin">Login</button>
+        <button id="btnSignup">Cadastro</button>
+      </div>
 
-  
-  <div class="container-login">
-    <div class="buttonsForm">
-      <div class="btnColor"></div>
-      <button id="btnSignin">Login</button>
-      <button id="btnSignup">Cadastro</button>
-    </div>
+      <div class="boxLogin">
+        <form id="signin" onsubmit="return entrar(event)">
+          <input type="text" placeholder="Email" required id="email_log" autocomplete="username"/>
+          <i class="fas fa-envelope iEmail"></i>
+          <input type="password" placeholder="Password" required id="senha_log" autocomplete="current-password"/>
+          <i class="fas fa-lock iPassword"></i>
+          <div class="boxButton">
+            <button type="submit" class="Btn">
+              <div class="sign"><svg viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg></div>
+              <div class="text">Entrar</div>
+            </button>
+          </div>
+        </form>
 
-    
-    <div class="boxLogin">
-    <form id="signin">
-      <input type="text" placeholder="Email" required id="email_log"/>
-      <i class="fas fa-envelope iEmail"></i>
-      <input type="password" placeholder="Password" required id="senha_log"/>
-      <i class="fas fa-lock iPassword"></i>
-      <div class="boxButton">
-      <button onclick="entrar()" class="Btn">
-  
-        <div class="sign"><svg viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg></div>
-        <div class="text">Entrar</div>
+        <form id="signup" onsubmit="return cadastrar(event)">
+          <input type="text" placeholder="Nome" required id="input_nome" />
+          <i class="iNome"></i>
+          <input type="text" placeholder="Email" required id="input_email" autocomplete="username"/>
+          <i class="iEmail"></i>
+          <input type="password" placeholder="Senha" required id="input_senha" autocomplete="new-password"/>
+          <i class="iPassword"></i>
+          <input type="password" placeholder="Confirmar Senha" required id="input_senha2" autocomplete="new-password"/>
+          <i class=" iPassword2"></i>
+          
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
     </div>
-      
-        
-      </button>
-    </div>
-    </form>
-
-    <form id="signup">
-      <input type="text" placeholder="Nome" required id="input_nome" />
-      <i class="iNome"></i>
-      <input type="text" placeholder="Email" required id="input_email"/>
-      <i class="iEmail"></i>
-      <input type="password" placeholder="Senha" required id="input_senha"/>
-      <i class="iPassword"></i>
-      <input type="password" placeholder="Confirmar Senha" required id="input_senha2"/>
-      <i class=" iPassword2"></i>
-      
-      <button onclick="cadastrar()" type="submit">Cadastrar</button>
-    </form>
   </div>
-</div>
 
-<div id="div_error"></div>
+  <div id="div_error"></div>
   <script src="JS/cadastro.js"></script>
 </body>
 </html>
+
 <script>
+  function cadastrar(event) {
+    event.preventDefault();
+    var nomeVar = document.getElementById("input_nome").value;
+    var emailVar = document.getElementById("input_email").value;
+    var senhaVar = document.getElementById("input_senha").value;
+    var confirmacaoSenhaVar = document.getElementById("input_senha2").value;
 
-  // Função de Cadastrar
-  function cadastrar() {
+    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        alert("Preencha todos os campos");
+        return false;
+    }
 
-//Recupere o valor da nova input pelo nome do id
-// Agora vá para o método fetch logo abaixo
-var nomeVar = input_nome.value;
-var emailVar = input_email.value;
-var senhaVar = input_senha.value;
-var confirmacaoSenhaVar = input_senha2.value;
-
-if (
-    nomeVar == "" ||
-    emailVar == "" ||
-    senhaVar == "" ||
-    confirmacaoSenhaVar == "" 
-) {
-    // div_erro.style.display = "block";
-    // div_erro.innerHTML =
-
-    alert("Preencha todos os campos");
-
-    return false;
-} else {
-    setInterval(sumirMensagem, 5000);
-}
-
-// Enviando o valor da nova input
-fetch("/usuarios/cadastrar", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-        
-    }),
-})
+    fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            nomeServer: nomeVar,
+            emailServer: emailVar,
+            senhaServer: senhaVar,
+        }),
+    })
     .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
         if (resposta.ok) {
-            // div_erro.style.display = "block";
-            // div_erro.innerHTML =
             alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
-
             setTimeout(() => {
                 window.location = "#signin";
             }, 2000);
-
-            limparFormulario();
-            finalizarAguardar();
         } else {
             throw "Houve um erro ao tentar realizar o cadastro!";
         }
@@ -144,79 +111,54 @@ fetch("/usuarios/cadastrar", {
         console.log(`#ERRO: ${resposta}`);
     });
 
-return false;
-}
+    return false;
+  }
 
-function sumirMensagem() {
-div_erro.style.display = "none";
-}
+  function entrar(event) {
+    event.preventDefault();
+    var emailVar = document.getElementById("email_log").value;
+    var senhaVar = document.getElementById("senha_log").value;
 
-// Função de  Logar
-  function entrar() {
-
-        var emailVar = email_log.value;
-        var senhaVar = senha_log.value;
-
-        if (emailVar == "" || senhaVar == "") {
-            //div_error.style.display = "block"
-            //div_error.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            alert('Preencha todos os campos')
-            return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
-
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
-
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                emailServer: emailVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-
-                    setTimeout(function () {
-                        window.location = "./dashboard/dashboard.html";
-                    }, 1000); // apenas para exibir o loading
-
-                });
-
-            } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                    finalizarAguardar(texto);
-                });
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
+    if (emailVar == "" || senhaVar == "") {
+        alert('Preencha todos os campos');
         return false;
     }
 
-    function sumirMensagem() {
-        div_error.style.display = "none"
-    }
+    fetch("/usuarios/autenticar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            emailServer: emailVar,
+            senhaServer: senhaVar,
+        }),
+    })
+    .then(function (resposta) {
+        if (resposta.ok) {
+            resposta.json().then(json => {
+                sessionStorage.EMAIL_USUARIO = json.email;
+                sessionStorage.NOME_USUARIO = json.nome;
+                sessionStorage.ID_USUARIO = json.id;
 
+                setTimeout(function () {
+                    window.location = "dashboard/dashboardR6.html";
+                }, 2000);
+            });
+        } else {
+            resposta.text().then(texto => {
+                console.error(texto);
+            });
+        }
+    })
+    .catch(function (erro) {
+        console.log(erro);
+    });
+
+    return false;
+  }
+
+  function sumirMensagem() {
+    document.getElementById("div_error").style.display = "none";
+  }
 </script>
