@@ -37,7 +37,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    background-color: rgb(45, 0, 255);
+    background-color: #2499ff;
     width: 90%;
     max-width: 800px;
 
@@ -81,7 +81,7 @@ h1 {
 }
 
 .button {
-    background-color: #4863f7;
+    background-color: #2499ff;
     color: #fffdfd;
     font-size: 16px;
     font-weight: bold;

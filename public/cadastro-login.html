@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | R6</title>
+    <link rel="stylesheet" href="CSS/cadastro.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container1">
+        <div class="header-logo"><span class="logoR6"></span></div>
+        <div class="navbar">
+          <a href="index.html"><div class="titulo"></div></a>
+          <div class="header-content1">
+            <span>Sobre Mim</span>
+            <a href="w7m.html"><span>Sobre W7M</span></a>
+            <a href="feminino.html"><span>Feminino</span></a>
+          </div>
+          <div class="header-content2">
+            <span>Meta</span>
+            <span>Operadores</span>
+            <span>Informações do Jogo</span>
+          </div>
+          <div class="registerContent">
+            <span class="buttonRegister">Login</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="container-login">
+        <div class="buttonsForm">
+          <div class="btnColor"></div>
+          <button id="btnSignin">Login</button>
+          <button id="btnSignup">Cadastro</button>
+        </div>
+
+        <div class="boxLogin">
+          <form id="signin" onsubmit="return entrar(event)">
+            <input
+              type="text"
+              placeholder="Email"
+              id="email_log"
+              autocomplete="username"
+            />
+            <i class="fas fa-envelope iEmail"></i>
+            <input
+              type="password"
+              placeholder="Password"
+              id="senha_log"
+              autocomplete="current-password"
+            />
+            <i class="fas fa-lock iPassword"></i>
+            <div class="boxButton">
+              <button type="submit" class="Btn">
+                <div class="sign">
+                  <svg viewBox="0 0 512 512">
+                    <path
+                      d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text">Entrar</div>
+              </button>
+            </div>
+          </form>
+
+          <form id="signup" onsubmit="return cadastrar(event)">
+            <input type="text" placeholder="Nome" id="input_nome" />
+            <i class="iNome"></i>
+            <input
+              type="text"
+              placeholder="Email"
+              id="input_email"
+              autocomplete="username"
+            />
+            <i class="iEmail"></i>
+            <input
+              type="password"
+              placeholder="Senha"
+              id="input_senha"
+              autocomplete="new-password"
+            />
+            <i class="iPassword"></i>
+            <input
+              type="password"
+              placeholder="Confirmar Senha"
+              id="input_senha2"
+              autocomplete="new-password"
+            />
+            <i class="iPassword2"></i>
+
+            <button type="submit">Cadastrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="div_error"><span id="msg_error"></span></div>
+    <script src="JS/cadastro-login.js"></script>
+  </body>
+</html>
+
+<script></script>

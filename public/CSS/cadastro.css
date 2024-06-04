@@ -296,3 +296,18 @@ i {
 .iPassword2 {
     top: 190px;
 }
+
+#div_error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20vw;
+    height: 20vh;
+    border: solid #2499ff;
+    background-color: black;
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
