@@ -49,11 +49,32 @@ function resetState(params) {
   document.body.removeAttribute("class");
   nextQuestionButton.classList.add("hide");
 }
+let contadorPerguntas = 0
+
+let pergunta1 = 0
+let pergunta2 = 0
+let pergunta3 = 0
+let pergunta4 = 0
+let pergunta5 = 0
+let pergunta6 = 0
 
 function selectAnswer(event) {
   const answerClicked = event.target;
-
+  contadorPerguntas++
   if (answerClicked.dataset.correct) {
+    if (contadorPerguntas == 1) {
+      pergunta1++
+    } else if (contadorPerguntas == 2) {
+      pergunta2++
+    } else if (contadorPerguntas == 3) {
+      pergunta3++
+    } else if (contadorPerguntas == 4) {
+      pergunta4++
+    } else if (contadorPerguntas == 5) {
+      pergunta5++
+    } else if (contadorPerguntas == 6) {
+      pergunta6++
+    }
     document.body.classList.add("correct");
     totalCorrect++;
   } else {
@@ -99,8 +120,14 @@ function finishGame(params) {
    Você acertou ${totalCorrect} de ${totalQuestion} questões!
   <span>Resultado: ${message}</span>
     </p>
-<button onclick=window.location.reload()>Refazer Teste</button>`;
+<button onclick="refazer()" class="button-refazer">Refazer Teste</button>`;
 }
+
+function refazer() {
+  enviarQuiz()
+  window.location.reload()
+}
+
 
 const questions = [
   {
@@ -112,6 +139,8 @@ const questions = [
       { text: "Campeôes", correct: true },
     ],
   },
+
+
   {
     question:
       "Quais personagens possuem escudo?",
@@ -161,3 +190,30 @@ const questions = [
     ],
   },
 ];
+
+
+
+
+
+function enviarQuiz() {
+  var totalAcertosVar = totalCorrect;
+  var idUsuario = sessionStorage.ID_USUARIO
+
+  fetch("/quiz/enviarQuiz", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+
+      totalAcertosServer: totalAcertosVar,
+      idUsuarioServer: idUsuario,
+      pergunta1Server: pergunta1,
+      pergunta2Server: pergunta2,
+      pergunta3Server: pergunta3,
+      pergunta4Server: pergunta4,
+      pergunta5Server: pergunta5,
+      pergunta6Server: pergunta6
+    }),
+  })
+} 

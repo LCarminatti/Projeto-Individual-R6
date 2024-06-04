@@ -343,7 +343,7 @@ canvas {
   justify-content: space-evenly;
   align-items: center;
   border-right: 3px solid #32b9cd;
-  background-color: #000000;
+  background-color: #fbfbfb;
 }
 
 .dash-right {
@@ -423,9 +423,9 @@ canvas {
 .btn-logout {
   margin: 0;
   padding: 0;
-  width: 20%;
-  background-color: #f7fafa;
-  color: rgb(0, 0, 0);
+  width: 40%;
+  background-color: #0a0a0a;
+  color: rgb(255, 255, 255);
   border-radius: 10px;
   text-align: center;
   padding: 10px 15px;

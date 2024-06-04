@@ -17,7 +17,7 @@ document.querySelector('#btnSignup')
   })
 
 
-  
+
 var msgErro = document.getElementById("msg_error")
 var divErro = document.getElementById("div_error")
 
@@ -97,6 +97,7 @@ function cadastrar(event) {
   return false;
 }
 
+
 function entrar(event) {
   event.preventDefault();
   var emailVar = document.getElementById("email_log").value;
@@ -147,6 +148,10 @@ function entrar(event) {
 
   return false;
 }
+
+
+
+
 
 function sumirMensagem() {
   document.getElementById("div_error").style.display = "none";
