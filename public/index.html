@@ -6,6 +6,7 @@
     <title>Home Page | R6</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
@@ -335,28 +336,36 @@
           </div>
       </div>
     </section>
-
-    <section class="section-sobre" id="sobre_mim">
-      <div class="container-bio">
-        <p>SOBRE MIM</p>
-      </div>
-      
-      <div class="box-container">
-      <div class="container-textImg">
-        
-        <div class="text-bio">
-          <div class="content-text">
-            <p>Meu nome é Lucas Carminatti dos Santos e tenho 21 anos. Desde muito cedo, descobri uma paixão que se tornaria uma parte essencial da minha vida: os videogames. Mais especificamente, sou apaixonado por Rainbow Six Siege, um jogo que vai além do mero entretenimento e se transformou em um campo onde desenvolvo habilidades e me conecto com pessoas ao redor do mundo.
-            </p>
-            <p>Além do jogo, sou uma pessoa com muitos interesses. Adoro tecnologia, música e esportes, e sempre busco equilibrar meu tempo entre essas atividades. Acredito que essa diversidade de interesses me ajuda a manter a mente aberta e criativa, sempre pronta para novos desafios.</p>
-          </div>
-        </div>
-
-        <div class="img-bio">
-          <div class="content-img"></div>
-        </div>
-      </div>
-    </div>
-    </section>
   </body>
 </html>
+<script>
+  // ScrollReveal().reveal('.container-textVideo', { delay: 2000 });
+  // ScrollReveal().reveal('.container-textVideo', { reset: true, interval: 16 });
+  var slideLeft = {
+    distance: '150%',
+    origin: 'left',
+    opacity: null,
+    delay: 300,
+    reset: true
+};
+
+var slideRight = {
+    distance: '150%',
+    origin: 'right',
+    opacity: null,
+    delay: 300,
+    reset: true
+};
+
+var slideUp = {
+    distance: '150%',
+    origin: 'bottom',
+    opacity: null,
+    delay: 300,
+    reset: true
+};
+
+ScrollReveal().reveal('.container-textVideo',slideLeft);
+ScrollReveal().reveal('.cards-agentes',slideRight);
+ScrollReveal().reveal('.container-agentes',slideLeft);
+</script>

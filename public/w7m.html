@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="CSS/w7m.css" />
     <link rel="stylesheet" href="CSS/slide.css">
   </head>
@@ -189,3 +190,31 @@
     </section>
   </body>
 </html>
+<script>
+
+  var slideLeft = {
+    distance: '150%',
+    origin: 'left',
+    opacity: null,
+    delay: 150,
+    reset: true
+};
+
+var slideRight = {
+    distance: '150%',
+    origin: 'right',
+    opacity: null,
+    delay: 150,
+    reset: true
+};
+
+var slideUp = {
+    distance: '150%',
+    origin: 'bottom',
+    opacity: null,
+    delay: 700,
+    reset: true
+};
+
+ScrollReveal().reveal('.container-textImagem',slideLeft);
+</script>

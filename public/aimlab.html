@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AimLab | R6</title>
+    <link rel="stylesheet" href="CSS/aimlab.css">
+</head>
+<body>
+    <div class="tela">
+        <div class="container_pontos">
+            <div class="content-pontos">
+            <span id="pontos">Pontos: 0</span>
+        </div>
+        </div>
+    </div>
+
+    <div id="inicioJogoCard" class="inicio-jogo-card">
+        <h2>AimLab R6</h2>
+        <div class="container-btn">
+        <button id="iniciarJogoBtn">Iniciar</button>
+        <a href="dashboard/dashboardR6.html"><button id="sairBtn">Sair</button></a>
+    </div>
+    </div>
+
+    <div id="fimJogoCard" class="fim-jogo-card oculto">
+        <h2>Fim de Jogo</h2>
+        <p>Você marcou <span id="pontosFinais">0</span> pontos!</p>
+        <p>Tempo de jogo: <span id="tempo"></span></p>
+        <div class="container-btn">
+        <button id="tentarNovamenteBtn">Tentar Novamente</button>
+        <a href="dashboard/dashboardR6.html"><button id="sairBtn">Sair</button></a>
+    </div>
+    </div>
+
+    <script src="JS/aimlab.js"></script>
+</body>
+</html>

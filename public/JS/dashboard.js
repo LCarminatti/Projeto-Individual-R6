@@ -54,3 +54,31 @@ new Chart(dash, {
     },
   },
 });
+
+function perguntaMaisAcertada(){
+  fetch(`/dashboardRoutes/perguntaMaisAcertada`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(function (resposta) {
+    console.log("ESTOU NO THEN DA MAIS ACERTADA()!")
+
+    if (resposta.ok) {
+      console.log(resposta);
+      resposta.json().then((json) => {
+        console.log(perguntaAcertada = json.perguntaMaisAcertada)
+
+        var perguntaAcertada = json.perguntaMaisAcertada
+        var perguntaMenosAcertada = json.perguntaMenosAcertada
+        
+        questaoErrada.innerHTML = `Questão: ${perguntaMenosAcertada}`
+        questaoAcertada.innerHTML = `Questão: ${perguntaAcertada}`
+
+      });
+    } else {
+      console.log("Houve um erro ao tentar realizar a requisição!");
+    }
+  });
+
+}

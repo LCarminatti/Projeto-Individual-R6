@@ -26,7 +26,7 @@
 
   </head>
 
-  <body>
+  <body onload="perguntaMaisAcertada()">
     <div class="container-header">
       <div class="header-left">
         <div class="perfil-img"></div>
@@ -37,12 +37,20 @@
 
         <div class="btn-nav-white">
           <a href="../quiz.html">
-            <h3>Quiz</h3>
+            <span>Quiz</span>
           </a>
         </div>
 
         <div class="btn-nav">
-          <h3>Gráficos</h3>
+        <a href="dashboardR6.html"> <span>Gráficos</span></a>
+        </div>
+
+        <div class="btn-custom">
+          <span>Customização</span>
+        </div>
+
+        <div class="btn-lab">
+          <a href="../aimlab.html"><span>Aimlab</span></a>
         </div>
 
         <div class="btn-logout" onclick="limparSessao()">
@@ -52,12 +60,23 @@
       
       
     </div>
-    <div class="container-dash">
-    <div class="graficoFavorito">
-      <canvas id="dash" class="dash"></canvas>
+    <div class="container">
+      <div class="box-kpi">
+        <div class="content-kpi"><span>Questão que mais acertaram:</span>
+        <p id="questaoAcertada"></p></div>
+        <div class="content-kpi"><span>Quantidade de pessoas que gabaritaram:</span></div>
+        <div class="content-kpi"><span>Questão que mais erraram:</span>
+        <p id="questaoErrada"></p></div>
+      </div>
+      <div class="container-dash">
+        <div class="box-dash">
+          <div class="graficoFavorito">
+            <canvas id="dash" class="dash"></canvas>
+        </div>
+        </div>
     </div>
   </div>
+</div>
   </body>
 </html>
 <script>
-
