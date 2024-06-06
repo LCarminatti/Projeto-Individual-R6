@@ -34,6 +34,52 @@ FROM (
     return database.executar(instrucaoSql);
 }
 
+function gabaritaram() {
+    var instrucaoSql = `
+   SELECT COUNT(*) AS total_pessoas_acertaram_tudo
+FROM quiz
+WHERE totalAcertos = 6
+AND pergunta1 = 1
+AND pergunta2 = 1
+AND pergunta3 = 1
+AND pergunta4 = 1
+AND pergunta5 = 1
+AND pergunta6 = 1;
+`;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function grafico() {
+    var instrucaoSql = `
+SELECT 'pergunta1' AS pergunta, COUNT(DISTINCT fkUsuario) AS total_pessoas_acertaram
+FROM quiz
+WHERE pergunta1 = 1
+UNION ALL
+SELECT 'pergunta2' AS pergunta, COUNT(DISTINCT fkUsuario) AS total_pessoas_acertaram
+FROM quiz
+WHERE pergunta2 = 1
+UNION ALL
+SELECT 'pergunta3' AS pergunta, COUNT(DISTINCT fkUsuario) AS total_pessoas_acertaram
+FROM quiz
+WHERE pergunta3 = 1
+UNION ALL
+SELECT 'pergunta4' AS pergunta, COUNT(DISTINCT fkUsuario) AS total_pessoas_acertaram
+FROM quiz
+WHERE pergunta4 = 1
+UNION ALL
+SELECT 'pergunta5' AS pergunta, COUNT(DISTINCT fkUsuario) AS total_pessoas_acertaram
+FROM quiz
+WHERE pergunta5 = 1
+UNION ALL
+SELECT 'pergunta6' AS pergunta, COUNT(DISTINCT fkUsuario) AS total_pessoas_acertaram
+FROM quiz
+WHERE pergunta6 = 1;
+   `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
-    perguntaMaisAcertada
+    perguntaMaisAcertada, gabaritaram, grafico
 };

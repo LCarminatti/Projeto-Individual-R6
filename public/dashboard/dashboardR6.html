@@ -26,7 +26,7 @@
 
   </head>
 
-  <body onload="perguntaMaisAcertada()">
+  <body onload="perguntaMaisAcertada(), gabaritaram(), grafico()">
     <div class="container-header">
       <div class="header-left">
         <div class="perfil-img"></div>
@@ -64,7 +64,8 @@
       <div class="box-kpi">
         <div class="content-kpi"><span>Questão que mais acertaram:</span>
         <p id="questaoAcertada"></p></div>
-        <div class="content-kpi"><span>Quantidade de pessoas que gabaritaram:</span></div>
+        <div class="content-kpi"><span>Quantidade de pessoas que gabaritaram:</span>
+        <p id="qtdGabarito"></p></div>
         <div class="content-kpi"><span>Questão que mais erraram:</span>
         <p id="questaoErrada"></p></div>
       </div>
@@ -75,8 +76,47 @@
         </div>
         </div>
     </div>
+    </div>
+
+    <div class="leaderboard">
+      <div class="container-imagem"></div> 
+
+      <h3 id="div_mensagem" class="titulo-h3">Ranking Aim Lab</h3>
+      
+      <div class="pontuacao_leaderboard">
+          <img src="../assets/medalha-ouro.png" alt="">
+          <div id="placar_img_usuario1"></div>
+          <h2 id="nome_primeiro">Antônio</h2>
+          <h2 id="pts_primeiro">13 Pts</h2>
+      </div>
+      <div class="pontuacao_leaderboard">
+          <img src="../assets/medalha-prata.png" alt="">
+          <div id="placar_img_usuario2"></div>
+          <h2 id="nome_segundo">Matheus</h2>
+          <h2 id="pts_segundo">11 Pts</h2>
+      </div>
+      <div class="pontuacao_leaderboard">
+          <img src="../assets/medalha-bronze.png" alt="">
+          <div id="placar_img_usuario3"></div>
+          <h2 id="nome_terceiro">Renato</h2>
+          <h2 id="pts_terceiro">9 Pts</h2>
+      </div>
+      <div class="pontuacao_leaderboard">
+          <h1>4°</h1>
+          <div id="placar_img_usuario4"></div>
+          <h2 id="nome_quarto">Araújo</h2>
+          <h2 id="pts_quarto">8 Pts</h2>
+      </div>
+      <div class="pontuacao_leaderboard">
+          <h1>5°</h1>
+          <div id="placar_img_usuario5"></div>
+          <h2 id="nome_quinto">Felps</h2>
+          <h2 id="pts_quinto">7 Pts</h2>
+      </div>
   </div>
-</div>
+
+      </div>
+    </div>
   </body>
 </html>
 <script>
