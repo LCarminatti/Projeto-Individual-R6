@@ -2,6 +2,7 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
 function limparSessao(){
   sessionStorage.clear()
+  window.location = '../index.html'
 }
 
 
@@ -139,4 +140,29 @@ function criarGrafico() {
       },
     },
   });
+}
+
+function ranking() {
+  fetch(`/dashboardRoutes/ranking`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(function (resposta) {
+    console.log("ESTOU NO THEN DO ranking()!")
+
+    if (resposta.ok) {
+      console.log(resposta);
+      resposta.json().then((json) => {
+        console.log(json.rankingNome1, json.rankingTempo1)
+
+        ranking1.innerHTML = `1° ${json.rankingNome1} - ${json.rankingTempo1} seg`;
+        ranking2.innerHTML = `2° ${json.rankingNome2} - ${json.rankingTempo2} seg`;
+        ranking3.innerHTML = `3° ${json.rankingNome3} - ${json.rankingTempo3} seg`;
+      });
+    } else {
+      console.log("Houve um erro ao tentar realizar a requisição!");
+    }
+  });
+
 }

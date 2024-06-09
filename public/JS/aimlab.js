@@ -11,6 +11,9 @@ let pontos = 0;
 let contadorElementos = 0;
 const limiteElementos = 30;
 let tempoInicial = 0;
+let tempoConclusao = 0;
+let ranking = '';
+
 
 iniciarJogoBtn.addEventListener('click', () => {
     inicioJogoCard.classList.add('oculto');
@@ -55,12 +58,24 @@ function clickElemento() {
     this.remove();
     if (pontos >= limiteElementos) {
         exibirFimJogo();
+
     }
 }
 
 function exibirFimJogo() {
     const tempoFinal = (Date.now() - tempoInicial) / 1000; // Calcula o tempo de jogo em segundos
     const segundos = Math.floor(tempoFinal % 60);
+    tempoConclusao = segundos
+
+    if (tempoConclusao < 18) {
+        ranking = 'Campeão'
+    } else if (tempoConclusao < 22) {
+        ranking = 'Diamante'
+    } else {
+        ranking = 'Esmeralda'
+    }
+
+
     pontosFinais.innerHTML = pontos;
     tempoJogo.innerHTML = `Finalizado em: ${segundos} segundos`;
     fimJogoCard.classList.remove('oculto');
@@ -82,3 +97,23 @@ tentarNovamenteBtn.addEventListener('click', () => {
 sairBtn.addEventListener('click', () => {
     window.location = 'dashboard/dashboardR6.html';
 });
+
+function enviarAimlab(){
+  var tempoConclusaoVar = tempoConclusao;
+  var rankingVar = ranking;
+  var idUsuario = sessionStorage.ID_USUARIO;
+
+  fetch("/aimlabRoutes/enviarAimlab", {
+    method: "POST",
+    headers: {
+        
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+
+      tempoConclusaoServer: tempoConclusaoVar,
+      rankingServer: rankingVar,  
+      idUsuarioServer: idUsuario
+    }),
+  })
+}

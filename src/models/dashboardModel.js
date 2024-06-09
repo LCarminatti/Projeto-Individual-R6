@@ -75,11 +75,32 @@ UNION ALL
 SELECT 'pergunta6' AS pergunta, COUNT(DISTINCT fkUsuario) AS total_pessoas_acertaram
 FROM quiz
 WHERE pergunta6 = 1;
-   `;
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
+`;
+console.log("Executando a instrução SQL: \n" + instrucaoSql);
+return database.executar(instrucaoSql);
 }
 
+
+function ranking(){
+    var instrucaoSql = `
+SELECT
+    (SELECT aimlab.velocidadeConclusao FROM aimlab JOIN usuario ON fkUsuario = idUsuario ORDER BY aimlab.velocidadeConclusao ASC LIMIT 1) AS tempo1,
+    (SELECT usuario.nome FROM aimlab JOIN usuario ON fkUsuario = idUsuario ORDER BY aimlab.velocidadeConclusao ASC LIMIT 1) AS nome1,
+    (SELECT aimlab.ranking FROM aimlab JOIN usuario ON fkUsuario = idUsuario ORDER BY aimlab.velocidadeConclusao ASC LIMIT 1) AS rank1,
+    (SELECT aimlab.velocidadeConclusao FROM aimlab JOIN usuario ON fkUsuario = idUsuario ORDER BY aimlab.velocidadeConclusao ASC LIMIT 1 OFFSET 1) AS tempo2,
+    (SELECT usuario.nome FROM aimlab JOIN usuario ON fkUsuario = idUsuario ORDER BY aimlab.velocidadeConclusao ASC LIMIT 1 OFFSET 1) AS nome2,
+    (SELECT aimlab.ranking FROM aimlab JOIN usuario ON fkUsuario = idUsuario ORDER BY aimlab.velocidadeConclusao ASC LIMIT 1 OFFSET 1) AS rank2,
+    (SELECT aimlab.velocidadeConclusao FROM aimlab JOIN usuario ON fkUsuario = idUsuario ORDER BY aimlab.velocidadeConclusao ASC LIMIT 1 OFFSET 2) AS tempo3,
+    (SELECT usuario.nome FROM aimlab JOIN usuario ON fkUsuario = idUsuario ORDER BY aimlab.velocidadeConclusao ASC LIMIT 1 OFFSET 2) AS nome3,
+    (SELECT aimlab.ranking FROM aimlab JOIN usuario ON fkUsuario = idUsuario ORDER BY aimlab.velocidadeConclusao ASC LIMIT 1 OFFSET 2) AS rank3;
+`;
+console.log("Executando a instrução SQL: \n" + instrucaoSql);
+return database.executar(instrucaoSql);
+}
+
+
+
 module.exports = {
-    perguntaMaisAcertada, gabaritaram, grafico
+    perguntaMaisAcertada, gabaritaram, grafico, ranking
 };
+

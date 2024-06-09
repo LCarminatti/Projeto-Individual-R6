@@ -15,4 +15,8 @@ router.get("/grafico", function (req, res) {
     dashboardController.grafico(req, res);
 });
 
+router.get("/ranking", function (req, res) {
+    dashboardController.ranking(req, res);
+});
+
 module.exports = router;
