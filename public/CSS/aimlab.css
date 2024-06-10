@@ -1,32 +1,32 @@
 * {
     box-sizing: border-box;
-   }
-   
-   body {
-       height: 100%;
-       overflow: hidden;
-       margin: 0;
-   }
-   
-   .tela {
-       height: 100vh;
-       width: 100vw;
-       background-image: url(../assets/estande-tiro-background.png);
-       background-size: cover;
-       background-position: center;
-       display: flex;
-       justify-content: center;
-   }
-   
-   .container_pontos {
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.tela {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/estande-tiro-background.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container_pontos {
     display: flex;
     justify-content: center;
     align-items: center;
-      height: 5rem;
-      width: 100vw;
-   }
+    height: 5rem;
+    width: 100vw;
+}
 
-   .content-pontos {
+.content-pontos {
     display: flex;
     align-items: center;
     text-align: center;
@@ -37,20 +37,21 @@
     border-radius: 50%;
     background-color: white;
     position: fixed;
-   }
-   
-   .elemento {
-       width: 50px;
-       height: 50px;
-       border: solid 1px white;
-       border-radius: 50%;
-       position: absolute;
-       background-image: url(../assets/mira-aimlab.png);
-       background-position: center;
-       background-size: cover;
-   }
+}
 
-.fim-jogo-card, .inicio-jogo-card {
+.elemento {
+    width: 50px;
+    height: 50px;
+    border: solid 1px white;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url(../assets/mira-aimlab.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.fim-jogo-card,
+.inicio-jogo-card {
     display: flex;
     width: 15rem;
     height: 25rem;
@@ -66,7 +67,7 @@
     border: 2px solid #2499ff;
     border-radius: 10px;
     text-align: center;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 .container-btn {
@@ -89,24 +90,24 @@ button {
     color: black;
     box-shadow: 0 0.4rem #dfd9d9;
     cursor: pointer;
-   }
-   
-   button:active {
+}
+
+button:active {
     color: white;
     box-shadow: 0 0.2rem #dfd9d9;
     transform: translateY(0.2rem);
-   }
-   
-   button:hover:not(:disabled) {
+}
+
+button:hover:not(:disabled) {
     background: #2499ff;
     color: white;
     text-shadow: 0 0.1rem #bcb4b4;
-   }
-   
-   button:disabled {
+}
+
+button:disabled {
     cursor: auto;
     color: grey;
-   }
+}
 
 .oculto {
     display: none;

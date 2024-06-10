@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
@@ -31,7 +29,7 @@ canvas {
 }
 
 .header-left {
-  
+
   top: 0;
   left: 0;
   z-index: 999;
@@ -47,14 +45,14 @@ canvas {
 }
 
 .perfil-img {
-    width: 7rem;
-    height: 7rem;
-    border: solid #2ed0e9;
-    border-radius: 50%;
-    background-color: white;
-    background-image: url(../assets/imagem-caveira.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+  width: 7rem;
+  height: 7rem;
+  border: solid #2ed0e9;
+  border-radius: 50%;
+  background-color: white;
+  background-image: url(../assets/usuario-default.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hello {
@@ -109,7 +107,7 @@ canvas {
   padding: 2% 5%;
 }
 
-div span{
+div span {
   font-weight: 800;
 }
 
@@ -133,7 +131,7 @@ div span{
 }
 
 
-.container{
+.container {
   width: 75vw;
   height: 100vh;
   display: flex;
@@ -142,7 +140,7 @@ div span{
   align-items: center;
 }
 
-.box-kpi{
+.box-kpi {
   width: 60vw;
   height: 40vh;
   display: flex;
@@ -159,6 +157,24 @@ div span{
   color: black;
   justify-content: center;
   font-size: 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.text-kpi {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+#questaoAcertada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-dash {
@@ -219,13 +235,15 @@ div span{
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  background-image: url(../assets/ranking-r6.png);
   background-position: center;
   background-size: cover;
+  background-image: url(../assets/default-ranking.png);
+  background-color: white;
 }
 
 
-.titulo-h1, .titulo-h3 {
+.titulo-h1,
+.titulo-h3 {
   text-align: center;
 }
 
@@ -243,11 +261,12 @@ div span{
   flex: 1;
   text-align: center;
 }
+
 .pontuacao_leaderboard h1 {
- font-size: 1.3em;
- padding-right: 17px;
- font-weight: 800;
- padding-left: 20px;
+  font-size: 1.3em;
+  padding-right: 17px;
+  font-weight: 800;
+  padding-left: 20px;
   text-align: center;
 }
 
@@ -257,7 +276,7 @@ div span{
   background-color: #e0e0e0;
   border-radius: 50%;
   margin-right: 10px;
-  
+
 }
 
 .pontuacao_leaderboard img {

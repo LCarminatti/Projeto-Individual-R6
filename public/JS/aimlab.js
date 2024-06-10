@@ -37,8 +37,8 @@ function gerarElementoAleatorio() {
 
     const elemento = document.createElement('div');
     elemento.classList.add('elemento');
-    const topRandom = Math.random() * (window.innerHeight - 100); 
-    const leftRandom = Math.random() * (window.innerWidth - 100); 
+    const topRandom = Math.random() * (window.innerHeight - 100);
+    const leftRandom = Math.random() * (window.innerWidth - 100);
 
     elemento.style.top = topRandom + 'px';
     elemento.style.left = leftRandom + 'px';
@@ -83,9 +83,9 @@ function exibirFimJogo() {
 }
 
 function limparTela() {
-    const elementos = document.querySelectorAll('.elemento'); 
+    const elementos = document.querySelectorAll('.elemento');
     elementos.forEach(elemento => {
-        elemento.remove(); 
+        elemento.remove();
     });
 }
 
@@ -98,22 +98,22 @@ sairBtn.addEventListener('click', () => {
     window.location = 'dashboard/dashboardR6.html';
 });
 
-function enviarAimlab(){
-  var tempoConclusaoVar = tempoConclusao;
-  var rankingVar = ranking;
-  var idUsuario = sessionStorage.ID_USUARIO;
+function enviarAimlab() {
+    var tempoConclusaoVar = tempoConclusao;
+    var rankingVar = ranking;
+    var idUsuario = sessionStorage.ID_USUARIO;
 
-  fetch("/aimlabRoutes/enviarAimlab", {
-    method: "POST",
-    headers: {
-        
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
+    fetch("/aimlabRoutes/enviarAimlab", {
+        method: "POST",
+        headers: {
 
-      tempoConclusaoServer: tempoConclusaoVar,
-      rankingServer: rankingVar,  
-      idUsuarioServer: idUsuario
-    }),
-  })
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+
+            tempoConclusaoServer: tempoConclusaoVar,
+            rankingServer: rankingVar,
+            idUsuarioServer: idUsuario
+        }),
+    })
 }

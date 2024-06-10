@@ -3,12 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-    overflow-x: hidden;    
-    
-}
+    overflow-x: hidden;
 
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -54,7 +50,7 @@ body {
     margin-right: 20rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .header-content2 {
@@ -227,7 +223,6 @@ body {
 .section3 {
     width: 100vw;
     height: 120vh;
-   
     background-size: auto;
     display: flex;
     justify-content: center;
@@ -274,6 +269,7 @@ body {
     flex-wrap: wrap;
     gap: 0.3px;
     overflow-y: hidden;
+    background-position: center;
 
 }
 
@@ -285,6 +281,7 @@ body {
     width: 10vw;
     margin-left: 0.5rem;
     background-size: cover;
+    background-position: center;
 
 }
 
@@ -307,8 +304,7 @@ body {
     transition: .8s;
 }
 
-.frente,
-.tras {
+.frente {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -317,13 +313,7 @@ body {
     backface-visibility: hidden;
 }
 
-.tras {
-    transform: rotateY(180deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
 
 
 #capitao {
@@ -506,17 +496,21 @@ body {
     display: flex;
 }
 
-.meta-atk, .meta-def {
+.meta-atk,
+.meta-def {
     width: 50vw;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-position:center ;
+    background-position: center;
     background-size: cover;
 }
 
-.card1-atk, .card2-atk, .card1-def, .card2-def{
+.card1-atk,
+.card2-atk,
+.card1-def,
+.card2-def {
     border-radius: 20px;
 }
 
@@ -584,8 +578,8 @@ body {
     align-items: center;
     flex-direction: column;
     font-size: 19px;
-    
-    
+
+
 }
 
 .content-img {

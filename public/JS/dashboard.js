@@ -1,12 +1,12 @@
 b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-function limparSessao(){
+function limparSessao() {
   sessionStorage.clear()
   window.location = '../index.html'
 }
 
 
-function perguntaMaisAcertada(){
+function perguntaMaisAcertada() {
   fetch(`/dashboardRoutes/perguntaMaisAcertada`, {
     method: "GET",
     headers: {
@@ -22,9 +22,9 @@ function perguntaMaisAcertada(){
 
         var perguntaAcertada = json.perguntaMaisAcertada
         var perguntaMenosAcertada = json.perguntaMenosAcertada
-        
-        questaoErrada.innerHTML = `Questão: ${perguntaMenosAcertada}`
-        questaoAcertada.innerHTML = `Questão: ${perguntaAcertada}`
+
+        questaoErrada.innerHTML = `${perguntaMenosAcertada}`
+        questaoAcertada.innerHTML = `${perguntaAcertada}`
 
       });
     } else {
@@ -34,7 +34,7 @@ function perguntaMaisAcertada(){
 
 }
 
-function gabaritaram(){
+function gabaritaram() {
   fetch(`/dashboardRoutes/gabaritaram`, {
     method: "GET",
     headers: {
@@ -49,7 +49,7 @@ function gabaritaram(){
         console.log(gabarito = json.gabarito)
 
         var gabarito = json.gabaritaram
-        
+
         qtdGabarito.innerHTML = `${gabarito}`
 
       });
@@ -115,7 +115,7 @@ function criarGrafico() {
           display: true,
           title: {
             display: true,
-            text: "Questôes", // Título do eixo X
+            text: "Questões", // Título do eixo X
             font: {
               weight: "bold", // Estilo da fonte (negrito)
               size: 20, // Tamanho da fonte

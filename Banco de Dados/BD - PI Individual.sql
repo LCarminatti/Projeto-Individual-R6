@@ -20,5 +20,18 @@ fkUsuario int,
 constraint fkUsuarioQuiz foreign key (fkUsuario) references usuario(idUsuario));
 
 
+create table aimlab (
+idAimlab int auto_increment,
+fkUsuario int,
+constraint pkComposta primary key(idAimlab, fkUsuario),
+velocidadeConclusao int,
+ranking varchar(45),
+totalPontos int,
+constraint fkAimlabUsuario foreign key (fkUsuario) references usuario (idUsuario));
+
+
+
+
+
 
 
